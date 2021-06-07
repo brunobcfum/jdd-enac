@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Timeline from '../views/Timeline.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +9,14 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/',
+    name: 'Timeline',
+    component: Timeline,
+    meta: { title: 'JDD ENAC 2022' }
   },
   {
     path: '/about',
