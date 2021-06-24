@@ -5,10 +5,6 @@
       dense
       color="blue darken-4"
     >
-      <a href="https://www.enac.fr/fr" class="pt-2">
-        <img class="mr-3" src="https://www.enac.fr/themes/custom/enac/assets/images/logo_rf_enac.jpg" height="45"/>
-      </a>
-
       <v-toolbar-title class="white--text">
         <span>JDD </span>
         <span class="font-weight-bold">| ENAC 2022</span>
@@ -46,7 +42,7 @@
           </v-list-item>
           <v-list-item
             class="subtitle" 
-            v-for="(item, index) in items"
+            v-for="(item, index) in langs"
             :key="index"
             @click="set_lang(item.lang)"
           >
@@ -66,30 +62,52 @@
         >
           {{ $vuetify.lang.t('$vuetify.menu.committee') }}
       </v-btn>
-      <v-btn
-          small
-          text
-          color="normal"
-        >
+
+      <v-menu
+        open-on-hover
+        bottom
+        small
+        offset-y
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            color="normal"
+            small
+            text
+            v-bind="attrs"
+            v-on="on"
+          >
           {{ $vuetify.lang.t('$vuetify.menu.areas') }}
-        </v-btn>
-      <v-toolbar-items>
-        <v-btn
-          text
-          small
-          color="normal"
-        >
-          {{ $vuetify.lang.t('$vuetify.menu.program') }}
-        </v-btn>
-        <v-btn
-          small
-          text
-          color="normal"
-          @click="openTimeline"
-        >
-          {{ $vuetify.lang.t('$vuetify.menu.previous') }}
-        </v-btn>
-      </v-toolbar-items>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            class="overline" 
+            v-for="(item, index) in areas"
+            :key="index"
+            @click="open(item.route)"
+          >
+            <v-list-item-title class="overline">{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
+      <v-btn
+        text
+        small
+        color="normal"
+      >
+        {{ $vuetify.lang.t('$vuetify.menu.program') }}
+      </v-btn>
+      <v-btn
+        small
+        text
+        color="normal"
+        @click="openTimeline"
+      >
+        {{ $vuetify.lang.t('$vuetify.menu.previous') }}
+      </v-btn>
     </v-toolbar>
   </div>
 </template>
@@ -98,11 +116,21 @@
 export default {
   data () {
     return {
-      items: [
+      langs: [
         { title: 'English',
           lang: 'en'},
         { title: 'Français',
           lang: 'fr'}
+      ],
+      areas: [
+        { title: 'Telecom',
+          route: 'Telecom'},
+        { title: 'HMI',
+          route: 'hmi'},
+        { title: 'ECO',
+          route: 'eco'},
+        { title: 'MATH',
+          route: 'math'}
       ],
     }
   },
@@ -115,6 +143,12 @@ export default {
     openHome () {
       this.$router.push({
         name: 'Home'
+    })
+    },
+    open (route) {
+      console.log(route)
+      this.$router.push({
+        name: route
     })
     },
     set_lang (lang) {

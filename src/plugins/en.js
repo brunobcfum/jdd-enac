@@ -7,6 +7,11 @@ export default {
     previous: 'Previous Editions',
     home: 'Home',
     translations: 'Translations'
+  },
+  area: {
+    students: 'Students',
+    description: 'Description',
+    telecom: 'Telecom'
   }
 }
   

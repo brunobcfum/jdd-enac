@@ -15,20 +15,14 @@
         </v-card-title>
         <v-container>
           <v-row>
-            <v-col
-              cols="12"
-              md="10"
+            <v-btn
+              color="blue-grey"
+              :href="pdf(year.year)"
+              target="_blank"
             >
-            Download Program  
-            </v-col>
-            <v-col
-              class="hidden-sm-and-down text-right"
-              md="2"
-            >
-              <v-icon>
-                mdi-download
-              </v-icon>
-            </v-col>
+            Download Program
+            <v-icon right dark>mdi-cloud-download</v-icon>
+            </v-btn>
           </v-row>
         </v-container>
       </v-card>
@@ -61,6 +55,11 @@ export default {
       }
     ],
   }),
+  methods: {
+    pdf: function (year) {
+      return "programs/jdd_" + year + ".pdf"
+    }
+  }
 }
 </script>
 

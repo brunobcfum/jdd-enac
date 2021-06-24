@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Timeline from '../views/Timeline.vue'
+import Telecom from '../views/Telecom/Telecom.vue'
 
 Vue.use(VueRouter)
 
@@ -13,9 +14,15 @@ const routes = [
     meta: { title: 'JDD ENAC 2022' }
   },
   {
-    path: '/',
+    path: '/timeline',
     name: 'Timeline',
     component: Timeline,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/telecom',
+    name: 'Telecom',
+    component: Telecom,
     meta: { title: 'JDD ENAC 2022' }
   },
   {

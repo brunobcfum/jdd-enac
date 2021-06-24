@@ -18,8 +18,11 @@
     <v-col
       class="text-right"
       cols="6"
-    >
+    >      
       © ENAC {{ new Date().getFullYear() }} — <a href="https://github.com/brunobcfum/jdd-enac">Fork me</a>
+      <a href="https://www.enac.fr/fr" >
+        <img class="mb-n4 ml-2" src="https://www.enac.fr/themes/custom/enac/assets/images/logo_rf_enac.jpg" height="45"/>
+      </a>
     </v-col>
   </v-footer>
 </template>
