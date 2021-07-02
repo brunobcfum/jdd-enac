@@ -16,7 +16,9 @@
         <v-container>
           <v-row>
             <v-btn
-              color="blue-grey"
+              dark
+              color="blue-grey darken-3"
+              class="ma-1"
               :href="pdf(year.year)"
               target="_blank"
             >

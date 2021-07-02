@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Timeline from '../views/Timeline.vue'
 import Telecom from '../views/Telecom/Telecom.vue'
+import Scape from '../views/Scape/Enter.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,12 @@ const routes = [
     name: 'Telecom',
     component: Telecom,
     meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/scape',
+    name: 'Scape',
+    component: Scape,
+    meta: { title: 'JDD SCAPE ROOM' }
   },
   {
     path: '/about',
