@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row class="text-center mt-15">
       <v-col cols="12">
         <v-img
           :src="require('../assets/jdd.png')"

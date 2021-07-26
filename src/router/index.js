@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Timeline from '../views/Timeline.vue'
 import Telecom from '../views/Telecom/Telecom.vue'
+import Devi from '../views/Devi/Overview.vue'
+import Optim from '../views/Optim/Overview.vue'
+import II from '../views/II/Overview.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +26,24 @@ const routes = [
     path: '/telecom',
     name: 'Telecom',
     component: Telecom,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/devi',
+    name: 'Devi',
+    component: Devi,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/optim',
+    name: 'Optim',
+    component: Optim,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/ii',
+    name: 'II',
+    component: II,
     meta: { title: 'JDD ENAC 2022' }
   },
   {

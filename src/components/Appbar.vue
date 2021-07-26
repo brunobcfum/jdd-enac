@@ -3,7 +3,7 @@
     <v-app-bar
       dark
       dense
-      color="blue darken-4"
+      color="light-blue darken-1"
     >
       <v-toolbar-title class="white--text">
         <span>JDD </span>
@@ -56,13 +56,13 @@
         <v-icon>mdi-home</v-icon>
       </v-btn>
       <v-btn
-          small
-          text
-          color="normal"
-        >
-          {{ $vuetify.lang.t('$vuetify.menu.committee') }}
+        small
+        text
+        color="normal"
+        @click="openTimeline"
+      >
+        {{ $vuetify.lang.t('$vuetify.menu.previous') }}
       </v-btn>
-
       <v-menu
         open-on-hover
         bottom
@@ -101,13 +101,13 @@
         {{ $vuetify.lang.t('$vuetify.menu.program') }}
       </v-btn>
       <v-btn
-        small
-        text
-        color="normal"
-        @click="openTimeline"
-      >
-        {{ $vuetify.lang.t('$vuetify.menu.previous') }}
+          small
+          text
+          color="normal"
+        >
+          {{ $vuetify.lang.t('$vuetify.menu.committee') }}
       </v-btn>
+
     </v-toolbar>
   </div>
 </template>
@@ -125,12 +125,12 @@ export default {
       areas: [
         { title: 'Telecom',
           route: 'Telecom'},
-        { title: 'HMI',
-          route: 'hmi'},
-        { title: 'ECO',
-          route: 'eco'},
-        { title: 'MATH',
-          route: 'math'}
+        { title: 'II',
+          route: 'II'},
+        { title: 'DEVI',
+          route: 'Devi'},
+        { title: 'OPTIM',
+          route: 'Optim'}
       ],
     }
   },

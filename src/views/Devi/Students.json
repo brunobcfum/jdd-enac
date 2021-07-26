@@ -1,0 +1,123 @@
+[
+  {
+    "nom": "ASOYAN",
+    "prenom": "Artaches",
+    "titre": "Estimation d'une probabilité d'échec à la sollicitation",
+    "directeur": "KLEIN",
+    "debut": "1/13/2020",
+    "equipe": "DEVI",
+    "Mail perso": "artashes.asoyan@outlook.com",
+    "mail": "-",
+    "état de la thèse en 2022": "3a en fev 2022"
+  },
+  {
+    "nom": "CABRIC",
+    "prenom": "Florent",
+    "titre": "Techniques d'interaction \"phygitales\" pour l'exploitation de systèmes informationnels complexes",
+    "directeur": "HURTER",
+    "debut": "10/1/2018",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "-",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  },
+  {
+    "nom": "FRICKER",
+    "prenom": "Paul",
+    "titre": "Implant rétinien d'aide à la Navigation Contextuelle et basée sur l'apprentissage",
+    "directeur": "HURTER",
+    "debut": "10/1/2019",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "-",
+    "état de la thèse en 2022": "3a en fev 2022"
+  },
+  {
+    "nom": "GARDY",
+    "prenom": "Ludovic",
+    "titre": "Visualisation et exploration de big data lors de l'étude de l'activité neuronale unitaire dans l'épilepsie",
+    "directeur": "HURTER",
+    "debut": "10/1/2018",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "ludovic.gardy@enac.fr",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  },
+  {
+    "nom": "GNANDI",
+    "prenom": "Kpante Emmanuel",
+    "titre": "Espaces des modules des variétés statistiques",
+    "directeur": "PUECHMOREL",
+    "debut": "10/12/2019",
+    "equipe": "DEVI",
+    "Mail perso": "kpanteemmanuel@gmail.com",
+    "mail": "-",
+    "état de la thèse en 2022": "3a en fev 2022"
+  },
+  {
+    "nom": "LESELLIER",
+    "prenom": "Max",
+    "titre": "Essays in Structural Econometrics",
+    "directeur": "BONTEMPS",
+    "debut": "9/1/2018",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "-",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  },
+  {
+    "nom": "RAHMAN",
+    "prenom": "Siddiqur",
+    "titre": "Big Data pour la modélisation des trajectoires",
+    "directeur": "LAPASSET",
+    "debut": "1/16/2019",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "siddiqur.rahman-ext@recherche.enac.fr",
+    "état de la thèse en 2022": "thèsefinie en 2022"
+  },
+  {
+    "nom": "REMMY",
+    "prenom": "Kevin",
+    "titre": "Essays in Empirical Industrial Organization",
+    "directeur": "BONTEMPS",
+    "debut": "9/1/2016",
+    "equipe": "DEVI",
+    "Mail perso": "-",
+    "mail": "-",
+    "état de la thèse en 2022": "thèsefinie en 2022"
+  },
+  {
+    "nom": "SERVAIS",
+    "prenom": "Anaïs",
+    "titre": "External to internal world attentional switch (A-SWITCH)",
+    "directeur": "HURTER",
+    "debut": "10/1/2019",
+    "equipe": "DEVI",
+    "Mail perso": "anais.servais@hotmail.com",
+    "mail": "anais.servais@cnrs.fr",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  },
+  {
+    "nom": "SORET",
+    "prenom": "Rébaï",
+    "titre": "Apprentissage en réalité virtuelle par intégration attentionnelle : application à l'aéronautique",
+    "directeur": "HURTER",
+    "debut": "10/1/2018",
+    "equipe": "DEVI",
+    "Mail perso": "rsoretpro@gmail.com",
+    "mail": "-",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  },
+  {
+    "nom": "CHEN",
+    "prenom": "Shangrong",
+    "titre": "ISOA (Impact of innovation in Strategies via Optimization models for Airports \nImpact sur les stratégies des acteurs via les modèles d'optimisation suite à une\ninnovation de rupture au niveau des aéroports)",
+    "directeur": "MONGEAU",
+    "debut": "9/3/2018",
+    "equipe": "DEVI",
+    "Mail perso": "shangrong.chen@hotmail.com",
+    "mail": "shangrong.chen@enac.fr",
+    "état de la thèse en 2022": "thèse finie en 2022"
+  }
+]
