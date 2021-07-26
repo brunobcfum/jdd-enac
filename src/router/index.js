@@ -6,6 +6,7 @@ import Telecom from '../views/Telecom/Telecom.vue'
 import Devi from '../views/Devi/Overview.vue'
 import Optim from '../views/Optim/Overview.vue'
 import II from '../views/II/Overview.vue'
+import Scape from '../views/Scape/Enter.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,12 @@ const routes = [
     name: 'II',
     component: II,
     meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/scape',
+    name: 'Scape',
+    component: Scape,
+    meta: { title: 'JDD SCAPE ROOM' }
   },
   {
     path: '/about',

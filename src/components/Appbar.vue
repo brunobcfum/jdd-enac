@@ -143,7 +143,7 @@ export default {
     openHome () {
       this.$router.push({
         name: 'Home'
-    })
+      })
     },
     open (route) {
       console.log(route)
