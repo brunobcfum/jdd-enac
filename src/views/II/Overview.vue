@@ -4,10 +4,10 @@
     <v-toolbar
       dark
       prominent
-      :src="require('../../assets/images/Telecom.jpg')"
+      :src="require('../../assets/images/IHM.jpg')"
     >
 
-     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.telecom') }}</v-toolbar-title>
+     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.list.ii') }}</v-toolbar-title>
 
     </v-toolbar>
     <v-tabs>
@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import Description from '@/views/Telecom/Description.vue'
-import Students from '@/views/Telecom/Students.vue'
+import Description from '@/views/II/Description.vue'
+import Students from '@/views/II/Students.vue'
 
 
 export default {

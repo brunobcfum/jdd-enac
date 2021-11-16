@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Timeline from '../views/Timeline.vue'
+import Program from '../views/Program.vue'
 import Telecom from '../views/Telecom/Telecom.vue'
 import Devi from '../views/Devi/Overview.vue'
 import Optim from '../views/Optim/Overview.vue'
@@ -21,6 +22,12 @@ const routes = [
     path: '/timeline',
     name: 'Timeline',
     component: Timeline,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/program',
+    name: 'Program',
+    component: Program,
     meta: { title: 'JDD ENAC 2022' }
   },
   {

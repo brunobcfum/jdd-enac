@@ -2,12 +2,11 @@
   <v-container>
     <v-card>
     <v-toolbar
-      dark
       prominent
       :src="require('../../assets/images/Optim.jpg')"
     >
 
-     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.optim') }}</v-toolbar-title>
+     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.list.optim') }}</v-toolbar-title>
 
     </v-toolbar>
     <v-tabs>

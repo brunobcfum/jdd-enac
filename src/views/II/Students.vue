@@ -18,7 +18,7 @@
 
 <script>
 import Card from '@/components/StudentCard'
-import students from '@/views/Telecom/Students.json'
+import students from '@/views/II/Students.json'
 
 export default {
   data () {

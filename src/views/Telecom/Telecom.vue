@@ -7,7 +7,7 @@
       :src="require('../../assets/images/Telecom.jpg')"
     >
 
-     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.telecom') }}</v-toolbar-title>
+     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.list.telecom') }}</v-toolbar-title>
 
     </v-toolbar>
     <v-tabs>

@@ -10,7 +10,7 @@
       <v-card>
         <v-card-title class="blue darken-2">
           <h2 class="text-h5 white--text font-weight-light">
-            JDD ENAC {{ year.year}}
+            JDD ENAC {{ year.year }}
           </h2>
         </v-card-title>
         <v-container>
@@ -22,7 +22,7 @@
               :href="pdf(year.year)"
               target="_blank"
             >
-            Download Program
+            {{ $vuetify.lang.t('$vuetify.download') }}
             <v-icon right dark>mdi-cloud-download</v-icon>
             </v-btn>
           </v-row>

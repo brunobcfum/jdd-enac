@@ -55,14 +55,7 @@
       <v-btn icon @click="openHome">
         <v-icon>mdi-home</v-icon>
       </v-btn>
-      <v-btn
-        small
-        text
-        color="normal"
-        @click="openTimeline"
-      >
-        {{ $vuetify.lang.t('$vuetify.menu.previous') }}
-      </v-btn>
+
       <v-menu
         open-on-hover
         bottom
@@ -93,10 +86,20 @@
         </v-list>
       </v-menu>
 
+            <v-btn
+        small
+        text
+        color="normal"
+        @click="openTimeline"
+      >
+        {{ $vuetify.lang.t('$vuetify.menu.previous') }}
+      </v-btn>
+
       <v-btn
         text
         small
         color="normal"
+        @click="openProgram"
       >
         {{ $vuetify.lang.t('$vuetify.menu.program') }}
       </v-btn>
@@ -105,7 +108,7 @@
           text
           color="normal"
         >
-          {{ $vuetify.lang.t('$vuetify.menu.committee') }}
+          {{ $vuetify.lang.t('$vuetify.menu.organization') }}
       </v-btn>
 
     </v-toolbar>
@@ -125,7 +128,7 @@ export default {
       areas: [
         { title: 'Telecom',
           route: 'Telecom'},
-        { title: 'II',
+        { title: 'HMI',
           route: 'II'},
         { title: 'DEVI',
           route: 'Devi'},
@@ -143,6 +146,11 @@ export default {
     openHome () {
       this.$router.push({
         name: 'Home'
+      })
+    },
+    openProgram () {
+      this.$router.push({
+        name: 'Program'
       })
     },
     open (route) {

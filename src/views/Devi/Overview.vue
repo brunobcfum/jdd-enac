@@ -7,7 +7,7 @@
       :src="require('../../assets/images/Devi.jpg')"
     >
 
-     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.devi') }}</v-toolbar-title>
+     <v-toolbar-title>{{ $vuetify.lang.t('$vuetify.area.list.devi') }}</v-toolbar-title>
 
     </v-toolbar>
     <v-tabs>
