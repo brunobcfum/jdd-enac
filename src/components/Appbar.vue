@@ -139,22 +139,27 @@ export default {
   },
   methods: {
     openTimeline () {
-      this.$router.push({
-        name: 'Timeline'
-    })
+      if (this.$route.name != 'Timeline') {
+        this.$router.push({
+          name: 'Timeline'
+        })
+      }
     },
     openHome () {
-      this.$router.push({
-        name: 'Home'
-      })
+      if (this.$route.name != 'Home') {
+        this.$router.push({
+          name: 'Home'
+        })
+      }
     },
     openProgram () {
-      this.$router.push({
-        name: 'Program'
-      })
+      if (this.$route.name != 'Program') {
+        this.$router.push({
+          name: 'Program'
+        })
+      }
     },
     open (route) {
-      console.log(route)
       this.$router.push({
         name: route
     })

@@ -105,13 +105,13 @@
       names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
       categories: ['Bellontes', 'Salle d\'exam'],
     }),
-    created () {
+    mounted () {
       this.$refs.calendar.checkChange()
     },
     computed: {
-      categories () {
-        return [this.$vuetify.lang.t('$vuetify.rooms.main_room'), this.$vuetify.lang.t('$vuetify.rooms.eating_room')]
-      }
+      // categories () {
+      //   return [this.$vuetify.lang.t('$vuetify.rooms.main_room'), this.$vuetify.lang.t('$vuetify.rooms.eating_room')]
+      //}
     },
     methods: {
       getEventColor (event) {

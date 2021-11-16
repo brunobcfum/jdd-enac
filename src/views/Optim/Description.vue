@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <v-row align="top" justify="left" no-gutters class="body-2">
+    <v-row no-gutters class="body-2">
       {{ $vuetify.lang.t('$vuetify.area.optim.description') }}
     </v-row>
-    <v-row align="top" justify="left" no-gutters>
+    <v-row no-gutters>
       <h1 class="mt-6 display-1">{{ $vuetify.lang.t('$vuetify.area.fields') }}</h1>
     </v-row>
     <hr>

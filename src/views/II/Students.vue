@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row align="top" justify="center" no-gutters>
+    <v-row  justify="center" no-gutters>
       <div v-for="(student,index) in students" :key=index>
         <Card
           :nom=student.nom
