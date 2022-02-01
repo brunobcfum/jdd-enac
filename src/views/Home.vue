@@ -8,16 +8,6 @@
           contain
           height="500"
         />
-<!--         <span
-          @click="link"
-          @mouseenter="changeText"
-          @mouseleave="resetText"
-          class="text-h4 font-italic myFont"
-          :class="color"
-         >
-         {{ $vuetify.lang.t('$vuetify.reference') }}
-
-         </span> -->
       </v-col>
 
     </v-row>
@@ -32,15 +22,6 @@
       color : "blue--text"
     }),
     methods: {
-      link (evt) {
-        if (!evt.ctrlKey) {
-          alert(this.$vuetify.lang.t('$vuetify.control'))
-        } else if (evt.ctrlKey) {
-          this.$router.push({
-            name: 'Scape'
-          })
-        }
-      },
       changeText () {
         this.color = 'pink--text'
       },
