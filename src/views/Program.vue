@@ -13,7 +13,7 @@
 
         </v-toolbar>
       </v-sheet>
-      <v-sheet height="64" max-width="800">
+      <v-sheet height="64" max-width="1000">
         <v-toolbar
           flat
         >
@@ -23,13 +23,13 @@
           <v-spacer></v-spacer>
         </v-toolbar>
       </v-sheet>
-      <v-sheet max-width="800">
+      <v-sheet max-width="1000">
         <v-calendar
           light
           class="elevation-5"
           first-time="7"
           interval-count="12"
-          interval-height="80"
+          interval-height="60"
           ref="calendar"
           v-model="eventday"
           color="primary"
@@ -49,57 +49,92 @@
   export default {
     data: () => ({
       focus: '',
-      eventday: '2019-01-10',
+      eventday: '2022-02-10',
       events: [
         {
           name: 'Discours d’ouverture : Missions et organisation de la recherche',
-          start: '2019-01-10 09:00',
-          end: '2019-01-10 09:15',
+          start: '2022-02-10 09:00',
+          end: '2022-02-10 09:15',
           color: 'indigo',
           category: 'Bellontes'
         },
         {
           name: 'Présentation : Qu’est-ce que le doctorat ',
-          start: '2019-01-10 09:15',
-          end: '2019-01-10 09:30',
+          start: '2022-02-10 09:15',
+          end: '2022-02-10 09:30',
           color: 'indigo',
           category: 'Bellontes'
         },
         {
           name: 'Présentation : DEVI, OPTIM, TELECOM, LII',
-          start: '2019-01-10 09:30',
-          end: '2019-01-10 10:15',
+          start: '2022-02-10 09:30',
+          end: '2022-02-10 10:15',
           color: 'indigo',
           category: 'Bellontes'
         },
         {
           name: 'Présentation des thèses des 2 A ',
-          start: '2019-01-10 10:45',
-          end: '2019-01-10 12:00',
+          start: '2022-02-10 10:45',
+          end: '2022-02-10 12:00',
           color: 'green darken-1',
           category: 'Bellontes'
         },
         {
           name: 'Ma thèse en 180s',
-          start: '2019-01-10 13:00',
-          end: '2019-01-10 14:00',
+          start: '2022-02-10 13:00',
+          end: '2022-02-10 14:00',
+          color: 'red darken-1',
+          category: 'Bellontes'
+        },
+        {
+          name: 'Témoignages d’anciens doctorants',
+          start: '2022-02-10 14:00',
+          end: '2022-02-10 15:00',
           color: 'red darken-1',
           category: 'Bellontes'
         },
         {
           name: 'Pause café + posters 1A',
-          start: '2019-01-10 10:15',
-          end: '2019-01-10 10:45',
+          start: '2022-02-10 10:15',
+          end: '2022-02-10 10:45',
           color: 'orange',
           category: "Salle d'exam"
         },
         {
-          name: 'Pause dej : buffet pour tout le monde',
-          start: '2019-01-10 12:15',
-          end: '2019-01-10 13:00',
+          name: 'Pause dejeuner',
+          start: '2022-02-10 12:15',
+          end: '2022-02-10 13:00',
           color: 'orange',
           category: "Salle d'exam"
         },
+        {
+          name: 'Pause café + posters 1A',
+          start: '2022-02-10 15:00',
+          end: '2022-02-10 15:30',
+          color: 'orange',
+          category: "Salle d'exam"
+        },
+        {
+          name: 'Tables rondes/atelier à thème',
+          start: '2022-02-10 15:30',
+          end: '2022-02-10 17:00',
+          color: 'orange',
+          category: "Salle d'exam"
+        },
+        {
+          name: 'Soirée Devant le batiment B',
+          start: '2022-02-10 17:00',
+          end: '2022-02-10 18:00',
+          color: 'deep-purple',
+          category: "Salle d'exam"
+        },
+        {
+          name: 'Soirée Devant le batiment B',
+          start: '2022-02-10 17:00',
+          end: '2022-02-10 18:00',
+          color: 'deep-purple',
+          category: "Bellontes"
+        }
       ],
       colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
       names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],

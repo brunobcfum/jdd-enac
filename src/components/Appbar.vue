@@ -107,6 +107,7 @@
           small
           text
           color="normal"
+          @click="openOrganization"
         >
           {{ $vuetify.lang.t('$vuetify.menu.organization') }}
       </v-btn>
@@ -156,6 +157,13 @@ export default {
       if (this.$route.name != 'Program') {
         this.$router.push({
           name: 'Program'
+        })
+      }
+    },
+    openOrganization () {
+      if (this.$route.name != 'Organization') {
+        this.$router.push({
+          name: 'Organization'
         })
       }
     },

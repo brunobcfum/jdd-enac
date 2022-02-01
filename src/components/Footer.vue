@@ -3,7 +3,7 @@
     padless
     class="font-weight-this; overline"
   >
-    <v-col
+<!--     <v-col
       class="text-left"
       cols="6"
     >
@@ -14,7 +14,8 @@
       <v-btn icon>
         <v-icon>mdi-instagram</v-icon>
       </v-btn>
-    </v-col>
+    </v-col> -->
+    <v-col></v-col>
     <v-col
       class="text-right"
       cols="6"

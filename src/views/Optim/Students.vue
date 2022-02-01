@@ -8,8 +8,9 @@
           :titre=student.titre
           :directeur=student.directeur
           :debut=student.debut
-          :groupe=student.groupe
+          :groupe=student.equipe
           :mail=student.mail
+          :ED=student.ED
         />
       </div>
     </v-row>

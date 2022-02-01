@@ -10,10 +10,11 @@
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div class="overline mb-4">PhD Researcher:</div>
+            <div class="overline mb-4">{{ $vuetify.lang.t('$vuetify.card.student') }}:</div>
             <v-list-item-title class="headline mb-1">{{nom}} {{prenom}}</v-list-item-title>
-            <v-list-item-subtitle>Supervisor: {{directeur}}</v-list-item-subtitle>
-            <v-list-item-subtitle>Group: {{groupe}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ $vuetify.lang.t('$vuetify.card.supervisor') }}: {{directeur}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ $vuetify.lang.t('$vuetify.card.group') }}: {{groupe}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ $vuetify.lang.t('$vuetify.card.ed') }}: {{ED}}</v-list-item-subtitle>
             <v-list-item-subtitle>Ecole Nationale de l'Aviation Civile</v-list-item-subtitle>
           </v-list-item-content>
 
@@ -25,12 +26,12 @@
           <v-img :src="avatar"></v-img>
           </v-list-item-avatar>
         </v-list-item>
-        <v-card-text>
+<!--         <v-card-text>
           <v-icon dense>mdi-email</v-icon>
           {{mail}}
-        </v-card-text>
+        </v-card-text> -->
         <v-card-actions>
-          From: {{debut}}
+          {{ $vuetify.lang.t('$vuetify.card.from') }}: {{debut}}
         </v-card-actions>
       </v-card>
     </v-col>
@@ -51,7 +52,8 @@ export default {
     directeur: String,
     debut: String,
     groupe: String,
-    mail: String
+    mail: String,
+    ED: String
   },
   computed: {
     avatar: function () {

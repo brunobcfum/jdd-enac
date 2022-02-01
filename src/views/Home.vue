@@ -3,12 +3,12 @@
     <v-row class="text-center mt-15">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/jdd.png')"
+          :src="require('../assets/jdd_trans.png')"
           class="my-3"
           contain
           height="500"
         />
-        <span
+<!--         <span
           @click="link"
           @mouseenter="changeText"
           @mouseleave="resetText"
@@ -17,7 +17,7 @@
          >
          {{ $vuetify.lang.t('$vuetify.reference') }}
 
-         </span>
+         </span> -->
       </v-col>
 
     </v-row>

@@ -4,9 +4,20 @@ export default {
   reference: 'The Aerospace reference',
   download: 'Download Program',
   agenda: 'Event program',
+  name: 'Name',
+  department: 'Department',
+  organization: 'Organization:',
+  support: 'With support from:',
   rooms: {
     main_room: "Bellontes",
     eating_room: "Exame room"
+  },
+  card: {
+    student: 'PhD Researcher',
+    supervisor: 'Supervisor at ENAC',
+    group: 'Group',
+    from: 'From',
+    ed: "Doctoral School"
   },
   menu: {
     organization: 'Organization',
