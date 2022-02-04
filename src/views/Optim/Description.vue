@@ -10,9 +10,7 @@
     <v-row class="mt-5">
       <span>
         <ul>
-          <li class="ma-2 body-2">{{ $vuetify.lang.t('$vuetify.area.devi.statistics') }}</li>
-          <li class="ma-2 body-2">{{ $vuetify.lang.t('$vuetify.area.devi.air_economics') }}</li>
-          <li class="ma-2 body-2">{{ $vuetify.lang.t('$vuetify.area.devi.visualization') }}</li>
+          <li class="ma-2 body-2">{{ $vuetify.lang.t('$vuetify.area.optim.axis') }}</li>
         </ul> 
       </span>
     </v-row>
