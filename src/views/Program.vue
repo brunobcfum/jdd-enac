@@ -29,7 +29,7 @@
           class="elevation-5"
           first-time="7"
           interval-count="12"
-          interval-height="60"
+          interval-height="150"
           ref="calendar"
           v-model="eventday"
           color="primary"
@@ -38,10 +38,37 @@
           :categories="categories"
           :events="events"
           :event-color="getEventColor"
+          @click:event="showDetails"
         ></v-calendar>
       </v-sheet>
     </v-col>
   </v-row>
+  <v-dialog
+    v-model="details"
+    max-width="500"
+  >
+    <v-card>
+      <v-card-title class="text-h5 grey lighten-2 mb-5">
+        {{currentDetails.name}}
+      </v-card-title>
+
+      <v-card-text v-for="text in currentDetails.details" v-bind:key="text.id">
+        {{text.text}}
+      </v-card-text>
+
+      <v-card-actions>
+        <v-spacer></v-spacer>
+
+        <v-btn
+          color="green darken-1"
+          
+          @click="details = false"
+        >
+          Close
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </v-container>
 </template>
 
@@ -49,96 +76,175 @@
   export default {
     data: () => ({
       focus: '',
+      currentDetails: {
+          name: '',
+          start: '',
+          end: '',
+          color: '',
+          category: '',
+          details: []
+      },
+      details: false,
       eventday: '2022-02-10',
       events: [
         {
-          name: 'Discours d’ouverture : Missions et organisation de la recherche',
+          name: 'Discours d’ouverture / Patrick SENAC',
           start: '2022-02-10 09:00',
-          end: '2022-02-10 09:15',
+          end: '2022-02-10 09:10',
           color: 'indigo',
-          category: 'Bellontes'
+          category: 'Bellonte',
         },
         {
-          name: 'Présentation : Qu’est-ce que le doctorat ',
-          start: '2022-02-10 09:15',
-          end: '2022-02-10 09:30',
+          name: 'Présentation du doctorat / David MALEC',
+          start: '2022-02-10 09:10',
+          end: '2022-02-10 09:20',
           color: 'indigo',
-          category: 'Bellontes'
+          category: 'Bellonte',
         },
         {
-          name: 'Présentation : DEVI, OPTIM, TELECOM, LII',
-          start: '2022-02-10 09:30',
-          end: '2022-02-10 10:15',
+          name: 'Présentation des laboratoires de recherche par les chefs d\'équipes',
+          start: '2022-02-10 09:20',
+          end: '2022-02-10 10:00',
           color: 'indigo',
-          category: 'Bellontes'
+          category: 'Bellonte',
+          details: [
+            {
+              id: 0,
+              text: "Thierry Klein (DEVI)"
+            },
+            {
+              id: 1,
+              text: "Stéphane Conversy (LII)"
+            },
+            {
+              id: 2,
+              text: "Daniel Delahaye (Optim)"
+            },
+            {
+              id: 3,
+              text: "Christophe Macabiau (Telecom)"
+            },
+          ]
         },
         {
-          name: 'Présentation des thèses des 2 A ',
-          start: '2022-02-10 10:45',
-          end: '2022-02-10 12:00',
-          color: 'green darken-1',
-          category: 'Bellontes'
-        },
-        {
-          name: 'Ma thèse en 180s',
-          start: '2022-02-10 13:00',
-          end: '2022-02-10 14:00',
+          name: 'Présentation des thèses des 2A (Ma thèse en 180s)',
+          start: '2022-02-10 10:30',
+          end: '2022-02-10 11:45',
           color: 'red darken-1',
-          category: 'Bellontes'
+          category: 'Bellonte'
+        },
+        {
+          name: 'Présentation des thèses des 3A (Ma thèse en 180s)',
+          start: '2022-02-10 12:45',
+          end: '2022-02-10 14:15',
+          color: 'red darken-1',
+          category: 'Bellonte'
         },
         {
           name: 'Témoignages d’anciens doctorants',
-          start: '2022-02-10 14:00',
+          start: '2022-02-10 14:15',
           end: '2022-02-10 15:00',
+          color: 'indigo',
+          category: 'Bellonte',
+          details: [
+            {
+              id: 0,
+              text: "Dong-Bach Vo (Post Doc LII)"
+            },
+            {
+              id: 1,
+              text: "Nicolas Capet (Anywaves)"
+            },
+            {
+              id: 2,
+              text: "Camille Raymond (Vector)"
+            },
+            {
+              id: 3,
+              text: "Capucine Amielh (Airbus)"
+            },
+            {
+              id: 4,
+              text: "Kevin Ellis (CNES)"
+            },
+            {
+              id: 5,
+              text: "Emilien Dubois (Airbus)"
+            },
+            {
+              id: 6,
+              text: "Almoctar Haiz (Infact)"
+            }
+          ]
+        },
+        {
+          name: 'Posters 1A',
+          start: '2022-02-10 10:00',
+          end: '2022-02-10 10:30',
           color: 'red darken-1',
-          category: 'Bellontes'
+          category: "Salle d'examen (Breguet)"
         },
         {
-          name: 'Pause café + posters 1A',
-          start: '2022-02-10 10:15',
-          end: '2022-02-10 10:45',
+          name: 'Pause déjeuner',
+          start: '2022-02-10 11:45',
+          end: '2022-02-10 12:45',
           color: 'orange',
-          category: "Salle d'exam"
+          category: "Salle d'examen (Breguet)"
         },
         {
-          name: 'Pause dejeuner',
-          start: '2022-02-10 12:15',
-          end: '2022-02-10 13:00',
-          color: 'orange',
-          category: "Salle d'exam"
-        },
-        {
-          name: 'Pause café + posters 1A',
+          name: 'Posters 1A',
           start: '2022-02-10 15:00',
           end: '2022-02-10 15:30',
-          color: 'orange',
-          category: "Salle d'exam"
+          color: 'red darken-1',
+          category: "Salle d'examen (Breguet)"
         },
         {
           name: 'Tables rondes/atelier à thème',
           start: '2022-02-10 15:30',
           end: '2022-02-10 17:00',
           color: 'orange',
-          category: "Salle d'exam"
+          category: "Salle d'examen (Breguet)",
+          details: [
+            {
+              id: 0,
+              text: "Quotidien du doctorant: (David Malec (Ecole doctorale Toulouse) et Lolla Shoucavy (Toulouse Alumni Doctors))"
+            },
+            {
+              id: 1,
+              text: "Carrière académique et enseignement: (Alexandre Chabory et Florence Nicol (ENAC))"
+            },
+            {
+              id: 2,
+              text: "Carrière dans l’entreprise: (Bertrand Masson (Airbus), Camille Raymond (Vector), Kevin ellis (CNES), Emilien Dubois (Airbus))"
+            },
+            {
+              id: 3,
+              text: "Entreprenariat: (Nicolas Capet (Anywaves)) - Carrière à l’étranger (Maxence Carvalho (FIU) et Juliette Rambourg (Saab))"
+            },
+            {
+              id: 4,
+              text: "Faire un Post-Doc: (Zeina El-Ahdab (ENAC-Telecom), David Morales (ENAC-Telecom), Dong-Bach Vo (ENAC-LII))"
+            }
+          ]
         },
         {
           name: 'Soirée Devant le batiment B',
           start: '2022-02-10 17:00',
           end: '2022-02-10 18:00',
           color: 'deep-purple',
-          category: "Salle d'exam"
+          category: "Salle d'examen (Breguet)"
         },
         {
           name: 'Soirée Devant le batiment B',
           start: '2022-02-10 17:00',
           end: '2022-02-10 18:00',
           color: 'deep-purple',
-          category: "Bellontes"
+          category: "Bellonte"
         }
       ],
       colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
       names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
-      categories: ['Bellontes', 'Salle d\'exam'],
+      categories: ['Bellonte', 'Salle d\'examen (Breguet)'],
     }),
     mounted () {
       this.$refs.calendar.checkChange()
@@ -151,6 +257,13 @@
     methods: {
       getEventColor (event) {
         return event.color
+      },
+      showDetails (event) {
+        var result = this.events.filter(obj => {
+          return obj.name === event.event.name
+        })
+        this.currentDetails = result[0]
+        this.details = true
       }
     },
   }
