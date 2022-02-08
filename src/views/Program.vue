@@ -13,16 +13,16 @@
 
         </v-toolbar>
       </v-sheet>
-      <v-sheet height="64" max-width="1000">
-        <v-toolbar
-          flat
-        >
-          <v-toolbar-title>
-            10-Feb-2022
-          </v-toolbar-title>
-          <v-spacer></v-spacer>
-        </v-toolbar>
-      </v-sheet>
+      <v-btn
+        dark
+        class="mb-2"
+        color="blue-grey darken-3"
+        target="_blank"
+        :href="pdf(2022)"
+      >
+      {{ $vuetify.lang.t('$vuetify.download') }}
+        <v-icon right dark>mdi-cloud-download</v-icon>
+      </v-btn>
       <v-sheet max-width="1000">
         <v-calendar
           light
@@ -228,31 +228,19 @@
           ]
         },
         {
-          name: 'Soirée Devant le batiment B',
-          start: '2022-02-10 17:00',
-          end: '2022-02-10 18:00',
-          color: 'deep-purple',
-          category: "Salle d'examen (Breguet)"
-        },
-        {
-          name: 'Soirée Devant le batiment B',
+          name: 'Remise de prix de la meilleure thèse en 180s et du meilleur poster',
           start: '2022-02-10 17:00',
           end: '2022-02-10 18:00',
           color: 'deep-purple',
           category: "Bellonte"
         }
       ],
-      colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
-      names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
       categories: ['Bellonte', 'Salle d\'examen (Breguet)'],
     }),
     mounted () {
       this.$refs.calendar.checkChange()
     },
     computed: {
-      // categories () {
-      //   return [this.$vuetify.lang.t('$vuetify.rooms.main_room'), this.$vuetify.lang.t('$vuetify.rooms.eating_room')]
-      //}
     },
     methods: {
       getEventColor (event) {
@@ -264,6 +252,9 @@
         })
         this.currentDetails = result[0]
         this.details = true
+      },
+      pdf: function (year) {
+      return "programs/jdd_" + year + ".pdf"
       }
     },
   }

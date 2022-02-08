@@ -5,7 +5,8 @@
       dense
       color="light-blue darken-1"
     >
-      <v-toolbar-title class="white--text">
+      <v-app-bar-nav-icon @click="toggleMenu" v-if="$vuetify.breakpoint.xs"></v-app-bar-nav-icon>
+      <v-toolbar-title v-if="!drawer" class="white--text">
         <span>JDD </span>
         <span class="font-weight-bold">| ENAC 2022</span>
       </v-toolbar-title>
@@ -51,7 +52,7 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-    <v-toolbar dense>
+    <v-toolbar v-if="!drawer && !$vuetify.breakpoint.xs" dense>
       <v-btn icon @click="openHome">
         <v-icon>mdi-home</v-icon>
       </v-btn>
@@ -174,9 +175,13 @@ export default {
     },
     set_lang (lang) {
       this.$vuetify.lang.current = lang
+    },
+    toggleMenu () {
+      this.$emit('toggleMenu')
     }
   },
   props: {
+    drawer: Boolean
   }
 }
 </script>

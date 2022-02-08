@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <Appbar></Appbar>
+    <Navigation v-on:toggleMenu="toggleMenu" v-bind:drawer="drawer"></Navigation>
+    <Appbar v-on:toggleMenu="toggleMenu" v-bind:drawer="drawer"></Appbar>
     <v-main>
       <router-view/>
     </v-main>
@@ -10,6 +11,7 @@
 
 <script>
 import Appbar from '@/components/Appbar'
+import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export default {
@@ -17,13 +19,18 @@ export default {
 
   components: {
     Appbar,
-    Footer
+    Footer,
+    Navigation
   },
 
   data: () => ({
-    //
+    drawer: false
   }),
-
+  methods: {
+    toggleMenu () {
+      this.drawer = !this.drawer
+    }
+  },
   watch: {
     $route: {
       immediate: true,
