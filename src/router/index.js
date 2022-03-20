@@ -8,6 +8,7 @@ import Devi from '../views/Devi/Overview.vue'
 import Optim from '../views/Optim/Overview.vue'
 import II from '../views/II/Overview.vue'
 import Organization from '../views/Organization.vue'
+import Presentations from '../views/Presentations/Presentations.vue'
 
 Vue.use(VueRouter)
 
@@ -58,6 +59,12 @@ const routes = [
     path: '/organization',
     name: 'Organization',
     component: Organization,
+    meta: { title: 'JDD ENAC 2022' }
+  },
+  {
+    path: '/presentations',
+    name: 'Presentations',
+    component: Presentations,
     meta: { title: 'JDD ENAC 2022' }
   },
   {

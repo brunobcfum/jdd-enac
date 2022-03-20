@@ -112,6 +112,14 @@
         >
           {{ $vuetify.lang.t('$vuetify.menu.organization') }}
       </v-btn>
+      <v-btn
+          small
+          text
+          color="normal"
+          @click="openPresentations"
+        >
+          {{ $vuetify.lang.t('$vuetify.menu.presentations') }}
+      </v-btn>
 
     </v-toolbar>
   </div>
@@ -165,6 +173,13 @@ export default {
       if (this.$route.name != 'Organization') {
         this.$router.push({
           name: 'Organization'
+        })
+      }
+    },
+    openPresentations () {
+      if (this.$route.name != 'Presentations') {
+        this.$router.push({
+          name: 'Presentations'
         })
       }
     },

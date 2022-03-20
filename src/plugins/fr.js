@@ -25,7 +25,8 @@ export default {
     program: 'Programme',
     previous: 'Editions précédentes',
     home: 'Accueil',
-    translations: 'Traductions'
+    translations: 'Traductions',
+    presentations: 'Presentations'
   },
   area: {
     students: 'Etudiants',

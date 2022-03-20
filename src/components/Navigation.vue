@@ -56,6 +56,12 @@
       </v-list-item-content>
     </v-list-item>
 
+    <v-list-item @click="openPresentations">
+      <v-list-item-content>
+          <v-list-item-title>{{ $vuetify.lang.t('$vuetify.menu.presentations') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+
     <v-list-item @click="openOrganization">
       <v-list-item-content>
           <v-list-item-title>{{ $vuetify.lang.t('$vuetify.menu.organization') }}</v-list-item-title>
@@ -129,6 +135,13 @@ export default {
       if (this.$route.name != 'Organization') {
         this.$router.push({
           name: 'Organization'
+        })
+      }
+    },
+    openPresentations () {
+      if (this.$route.name != 'Presentations') {
+        this.$router.push({
+          name: 'Presentations'
         })
       }
     },
