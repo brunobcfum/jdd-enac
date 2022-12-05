@@ -2,13 +2,14 @@
   <v-container>
     <v-row class="text-center mt-15">
       <v-col cols="12">
-        <a href="https://framaforms.org/retours-sur-la-jdd-1644339763">Please answer this survey about the event</a>
         <v-img
           :src="require('../assets/jdd_trans.png')"
           class="my-3"
           contain
-          height="500"
+          height="400"
         />
+        
+        <div class="text-h3"> 09/03/2023 </div>
       </v-col>
 
     </v-row>

@@ -25,6 +25,17 @@
             {{ $vuetify.lang.t('$vuetify.download') }}
             <v-icon right dark>mdi-cloud-download</v-icon>
             </v-btn>
+            <v-btn
+              dark
+              v-if="year.presentations"
+              color="blue-grey darken-3"
+              class="ma-1"
+              target="_blank"
+              @click="presentations(year.year)"
+            >
+            {{ $vuetify.lang.t('$vuetify.menu.presentations') }}
+            <v-icon right dark>mdi-presentation</v-icon>
+            </v-btn>
           </v-row>
         </v-container>
       </v-card>
@@ -41,25 +52,37 @@ export default {
     years: [
       {
         color: 'cyan',
-        year: '2010',
+        year: '2022',
+        presentations: true
+      },
+      {
+        color: 'cyan',
+        year: '2014',
       },
       {
         color: 'green',
-        year: '2012',
-      },
-      {
-        color: 'pink',
         year: '2013',
       },
       {
+        color: 'pink',
+        year: '2012',
+      },
+      {
         color: 'amber',
-        year: '2014',
+        year: '2010',
       }
     ],
   }),
   methods: {
     pdf: function (year) {
       return "programs/jdd_" + year + ".pdf"
+    },
+    presentations: function(year) {
+      if (this.$route.name != 'Presentations' + year) {
+        this.$router.push({
+          name: 'Presentations' + year
+        })
+      }
     }
   }
 }

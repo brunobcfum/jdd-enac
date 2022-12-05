@@ -56,11 +56,11 @@
       </v-list-item-content>
     </v-list-item>
 
-    <v-list-item @click="openPresentations">
+<!--     <v-list-item @click="openPresentations">
       <v-list-item-content>
           <v-list-item-title>{{ $vuetify.lang.t('$vuetify.menu.presentations') }}</v-list-item-title>
       </v-list-item-content>
-    </v-list-item>
+    </v-list-item> -->
 
     <v-list-item @click="openOrganization">
       <v-list-item-content>

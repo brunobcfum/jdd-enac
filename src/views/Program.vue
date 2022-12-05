@@ -1,6 +1,9 @@
 <template>
 <v-container fill-height fluid>
-  <v-row class="fill-height" justify="center" align="center">
+  <v-row>
+  <v-col class="text-center">To be announced</v-col>
+  </v-row>
+<!--   <v-row class="fill-height" justify="center" align="center">
     <v-col justify="center" align="center">
       <v-sheet height="135">
         <v-toolbar
@@ -68,7 +71,7 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-  </v-dialog>
+  </v-dialog> -->
 </v-container>
 </template>
 

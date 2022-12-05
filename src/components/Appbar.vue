@@ -8,7 +8,7 @@
       <v-app-bar-nav-icon @click="toggleMenu" v-if="$vuetify.breakpoint.xs"></v-app-bar-nav-icon>
       <v-toolbar-title v-if="!drawer" class="white--text">
         <span>JDD </span>
-        <span class="font-weight-bold">| ENAC 2022</span>
+        <span class="font-weight-bold">| ENAC 2023</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -112,14 +112,14 @@
         >
           {{ $vuetify.lang.t('$vuetify.menu.organization') }}
       </v-btn>
-      <v-btn
+<!--       <v-btn
           small
           text
           color="normal"
           @click="openPresentations"
         >
           {{ $vuetify.lang.t('$vuetify.menu.presentations') }}
-      </v-btn>
+      </v-btn> -->
 
     </v-toolbar>
   </div>
